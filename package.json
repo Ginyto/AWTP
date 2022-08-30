@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ginyto/AWTP/issues"
   },
-  "homepage": "https://github.com/Ginyto/AWTP#readme"
+  "homepage": "https://github.com/Ginyto/AWTP#readme",
+  "devDependencies": {
+    "jest": "^29.0.1"
+  }
 }
