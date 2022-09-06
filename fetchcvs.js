@@ -13,7 +13,25 @@ function processData(csvText) {
 
     var data = []
 
-    
+    const lines = csvText.split('\n')
 
-    console.log(csvText)
+    for (let index = 1; index < lines.length; index++) {
+
+        const line = lines[index]
+
+        const [username, realname, website, projectname] = line.split(',')
+
+        if (website != '') {
+            web = website
+        }
+        else {
+            web = null
+        }
+
+        data.push({username, realname, web, projectname})
+    }
+
+    console.log(JSON.parse(JSON.stringify(data)))
+
+
 }
