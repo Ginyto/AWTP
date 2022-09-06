@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Ginyto/AWTP#readme",
   "devDependencies": {
     "jest": "^29.0.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
   }
 }
