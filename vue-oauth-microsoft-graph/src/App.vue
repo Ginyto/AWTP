@@ -1,18 +1,30 @@
 <template>
 
+  <h1>TP3</h1>
+
   <div>
 
-    <base-header />
-
-      <base-layout>
-        <home-page />
-      </base-layout>
-
-    <base-footer />
+    <BaseLayout>
+      <HomePage />
+    </BaseLayout>
 
   </div>
 
 </template>
+
+<script>
+import HomePage from './views/HomePage.vue';
+import BaseLayout from './components/Base-layout.vue';
+  
+
+  export default {
+
+    components: {
+    HomePage,
+    BaseLayout
+},
+  };
+</script>
 
 <style>
 
