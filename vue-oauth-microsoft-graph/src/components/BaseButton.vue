@@ -1,6 +1,6 @@
 <template>
 
-  <button id="btn">
+  <button id="btn" :class=color>
     <slot />
   </button>
 
@@ -13,7 +13,14 @@ export default {
   data() {
     return {};
   },
-  props: {},
+
+  props: {
+    color : {
+      type: String,
+      default: 'primary'
+    }
+  },
+
   methods: {},
 };
 </script>
@@ -22,7 +29,7 @@ export default {
 #btn {
   color: #fff;
   font-weight: bold;
-  background: linear-gradient(315deg, #42d392 25%, #647eff);
+  /* background: linear-gradient(315deg, #42d392 25%, #647eff); */
   border: none;
   padding: 5px 10px;
   margin: 5px;
@@ -32,7 +39,7 @@ export default {
 
 #btn:hover {
 
-  background: linear-gradient(315deg, #ff6464 25%, #d3bd42);
+  background: linear-gradient(315deg, #ff646461 25%, #d3bd4269);
 }
 
 #btn:focus{
@@ -40,5 +47,16 @@ export default {
   width: 100px;
 }
 
+.primary {
+  background: linear-gradient(315deg, #42d392 25%, #647eff);
+}
+
+.warn {
+  background: linear-gradient(315deg, #a342d3 25%, #ff6464);
+}
+
+.danger {
+  background: linear-gradient(315deg, #ff6464 25%, #d3bd42);
+}
 
 </style>

@@ -1,8 +1,16 @@
 <template>
   <div>This is a HomePage</div>
 
-  <BaseButton style="color:black">
-    Click me
+  <BaseButton color="primary">
+    Primary
+  </BaseButton>
+
+  <BaseButton color="warn">
+    Warn
+  </BaseButton>
+
+  <BaseButton color="danger">
+    Danger
   </BaseButton>
 
   <BaseButton style="cursor: not-allowed">
