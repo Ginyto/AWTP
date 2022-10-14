@@ -18,6 +18,11 @@ export default {
     color : {
       type: String,
       default: 'primary'
+    },
+
+    disable : {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -59,4 +64,8 @@ export default {
   background: linear-gradient(315deg, #ff6464 25%, #d3bd42);
 }
 
+.disable {
+
+  background: linear-gradient(315deg, #ff2626 25%, #ff6464);
+}
 </style>
