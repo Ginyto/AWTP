@@ -1,9 +1,15 @@
 <template>
 
   <div>
+
     <base-header />
-    <home-page />
+
+      <base-layout>
+        <home-page />
+      </base-layout>
+
     <base-footer />
+
   </div>
 
 </template>

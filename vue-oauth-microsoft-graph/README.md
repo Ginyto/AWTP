@@ -15,6 +15,10 @@
     Eslint est un moyen d'analyser en permance notre code afin d'identifier des erreurs et les corriger selon un ensemble de règles bien défini cela permet d'imposer un standard selon la version ESlint
 
 
+## Question 5
+    La difference entre scopped et non scopped est que du css scopped s'applique uniquement au fichier dans lequel il est ecrit alors que le non scopped s'applique a tout le projet 
+
+
 
 ## Project setup
 ```
