@@ -2,15 +2,15 @@
 
   <BaseButton
 
-    :disabled="isPending"
-
     :color="color"
 
     :style="style"
 
-    @click.stop.prevent="handleClick">
+    @click.stop.prevent="handleClick"
+    
+    @click="increment">
 
-    <div v-if="isPending">Wait</div>
+    <div v-if="isPending">Wait {{count}} second</div>
 
     <slot />
   
@@ -35,8 +35,10 @@ export default {
 
   data() {
     return {
-      isPending: false,
-      isdisable: ""
+
+      count: 1,
+
+      style: "",
     }
   },
 
@@ -58,11 +60,16 @@ export default {
       console.log('handleClick end');
     },
 
+    increment() {
+      this.count++;
+      console.log(this.count);
+    },
+
     WaitForSec() {
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve()
-        }, 2000)
+        }, this.count*1000)
       })
 
     }

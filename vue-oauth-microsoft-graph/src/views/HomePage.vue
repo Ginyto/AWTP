@@ -17,15 +17,17 @@
     Disable
   </BaseButton>
 
-  <BaseButtonAsync color="disable" @click="asyncClick">
+  <BaseButtonAsync color="warn" @click="asyncClick">
     Async Primary
   </BaseButtonAsync>
 
 </template>
 
 <script>
+
 import BaseButton from '@/components/BaseButton.vue';
 import BaseButtonAsync from '@/components/BaseButtonAsync.vue';
+
 export default {
     name: "Test",
     created() { },

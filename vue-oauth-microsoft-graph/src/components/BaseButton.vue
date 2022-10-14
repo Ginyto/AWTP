@@ -18,11 +18,6 @@ export default {
     color : {
       type: String,
       default: 'primary'
-    },
-
-    disable : {
-      type: Boolean,
-      default: false
     }
   },
 
