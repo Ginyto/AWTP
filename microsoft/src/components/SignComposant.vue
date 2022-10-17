@@ -2,7 +2,7 @@
 
   <div id="zone">
 
-    <SignButton @user="(event) => $emit('user', event)" />
+    <SignButton/>
 
   </div>
 
@@ -19,10 +19,8 @@ export default {
     data() {
       return {
 
-        user: {},
-
       };
-  },
+    },
     
   props: {},
     

@@ -7,30 +7,43 @@
 <script>
 
 import { signInAndGetUser } from "../microsoftGraph.js";
+
 export default {
 
   data() {
     return {
-      user: {},
+
+      injectUser : this.user
+      
     };
   },
-  props: {},
 
   methods: {
 
     signIn() {
       
-      signInAndGetUser().then((user) => {
-          this.user = user;
-          this.$emit("user", user);
-          console.log(user);
+      signInAndGetUser().then((data) => {
+        
+        console.log(this.injectUser);
           
-        }).catch((error) => {
-          console.log(error);
-        });
+        this.injectUser.value = {
+            name: data.name,
+            username : data.username,
+        }
+          console.log(data);
+          
+          console.log(this.injectUser);
+
+      }).catch((error) => {
+        console.log(error);
+      });
 
     },
   },
+
+  inject: ["user"]
+
+
 };
 </script>
 

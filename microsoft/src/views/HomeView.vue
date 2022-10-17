@@ -1,14 +1,15 @@
 <template>
 
   <div id="zone">
-    <SignComposant @user="(event) => user = event " />
-    From the HomeView : {{ user.name }} {{ user.username }}
+    <SignComposant/>
+    Here are the data of the user with provide and inject: {{user.value}}
   </div>
   
 </template>
 
 <script>
 import SignComposant from '@/components/SignComposant.vue';
+import { computed } from 'vue';
 // @ is an alias to /src
 
 
@@ -21,10 +22,20 @@ export default {
 
   data() {
     return {
+
       user: {},
+    
     };
   },
 
+  provide() {
+    return {
+      user : computed(() => this.user)
+    };
+  },
+
+
+  
   
 }
 </script>
