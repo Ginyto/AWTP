@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>You can only acces if you are logged : Congratulation</h1>
   </div>
 </template>
