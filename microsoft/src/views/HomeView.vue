@@ -3,6 +3,10 @@
   <div id="zone">
     <SignComposant/>
     Here are the data of the user with provide and inject: {{this.$store.getters.getUser.name}} {{this.$store.getters.getUser.username}}
+
+    <div v-show="this.$store.getters.getUser.name != null">
+      <router-link :to="{name : 'conversation', params : {user : name }}">Go to conversation only if you are logged</router-link>
+    </div>
   </div>
   
 </template>
@@ -24,7 +28,18 @@ export default {
     return {
     
     };
-  }
+  },
+
+  computed: {
+    name() {
+      if (this.$store.getters.getUser.name != null) {
+        return this.$store.getters.getUser.name;
+      }
+      else {
+        return 'username';
+      }
+    }
+  },
 
 
   
