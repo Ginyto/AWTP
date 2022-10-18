@@ -2,7 +2,7 @@
 
   <div id="zone">
     <SignComposant/>
-    Here are the data of the user with provide and inject: {{user.value}}
+    Here are the data of the user with provide and inject: {{this.$store.getters.getUser.name}} {{this.$store.getters.getUser.username}}
   </div>
   
 </template>
@@ -22,17 +22,9 @@ export default {
 
   data() {
     return {
-
-      user: {},
     
     };
-  },
-
-  provide() {
-    return {
-      user : computed(() => this.user)
-    };
-  },
+  }
 
 
   

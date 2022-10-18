@@ -13,8 +13,6 @@ export default {
   data() {
     return {
 
-      injectUser : this.user
-      
     };
   },
 
@@ -23,16 +21,10 @@ export default {
     signIn() {
       
       signInAndGetUser().then((data) => {
-        
-        console.log(this.injectUser);
-          
-        this.injectUser.value = {
-            name: data.name,
-            username : data.username,
-        }
-          console.log(data);
-          
-          console.log(this.injectUser);
+
+        console.log(data);
+
+        this.$store.commit("setUser", data);
 
       }).catch((error) => {
         console.log(error);
@@ -40,8 +32,6 @@ export default {
 
     },
   },
-
-  inject: ["user"]
 
 
 };
